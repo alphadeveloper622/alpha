@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Alpha People</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css?v=1.1" />
+  </head>
+  <body>
+    <div class="main-wrapper overflow-hidden">
+      <div class="auth-layout">
+        <header id="header">
+          <div class="container-content">
+            <ul class="main-menu">
+              <li>
+                <a href="#" class="active">Track & Receive</a>
+              </li>
+              <li>
+                <a href="#">Send</a>
+              </li>
+              <li>
+                <a href="#">Help</a>
+              </li>
+              <li class="menu-item menu-item-has-children">
+                <a href="#">More</a>
+                <ul class="sub-menu">
+                  <li class="menu-item">
+                    <a href="#">National Address</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Services</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="bg-layer"></div>
+            <div class="hamburger hamburger--spin unactive">
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+          </div>
+          <!--container content-->
+        </header>
+        <!--header-->
+        <div class="overlay-menu">
+          
+        </div>
+        <div class="container-fluid">
+          <div class="row align-items-stretch">
+            <div class="col-xl-5">
+              <div class="handle-position">
+                <div class="logo-section">
+                  <img src="imgs/logo.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-7 pr-0">
+              <div class="info-section position-relative">
+                <div class="auth-form">
+                  <div class="w-100">
+                    <h2>Sign Up for an account</h2>
+                    <p class="text-base">
+                      Already have an account? <a href="index.html">Sign In</a>
+                    </p>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link active"
+                          id="details-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#details-tab-pane"
+                          type="button"
+                          role="tab"
+                          aria-controls="details-tab-pane"
+                          aria-selected="true"
+                        >
+                          User details
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link"
+                          id="account-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#account-tab-pane"
+                          type="button"
+                          role="tab"
+                          aria-controls="account-tab-pane"
+                          aria-selected="false"
+                        >
+                          Account Details
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link"
+                          id="address-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#address-tab-pane"
+                          type="button"
+                          role="tab"
+                          aria-controls="address-tab-pane"
+                          aria-selected="false"
+                        >
+                          Address Details
+                        </button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="details-tab-pane"
+                        role="tabpanel"
+                        aria-labelledby="details-tab"
+                        tabindex="0"
+                      >
+                        <form class="needs-validation" novalidate>
+                          <div class="form-group">
+                            <label for="fullname">Full name</label>
+                            <input
+                              id="fullname"
+                              type="text"
+                              class="form-control"
+                              placeholder="Enter your full name"
+                              value=""
+                            />
+                            <div class="invalid-feedback">
+                              Please enter your full name
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="email"> Email Address</label>
+                            <input
+                              id="email"
+                              type="email"
+                              class="form-control"
+                              placeholder="Enter your email"
+                              value=""
+                            />
+                            <div class="invalid-feedback">
+                              Please enter your email
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="phone-number">Phone Number </label>
+                            <input
+                              id="phone-number"
+                              type="text"
+                              class="form-control"
+                              placeholder="Enter your Phone Number"
+                              value=""
+                            />
+                            <div class="invalid-feedback">
+                              Please enter your Phone Number
+                            </div>
+                          </div>
+
+                          <div class="text-center">
+                            <button
+                              class="btn btn-primary my-3"
+                              onclick= "switchToNextTab()"
+                              type="button"
+                            >
+                              Next
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+
+                      <div
+                        class="tab-pane fade"
+                        id="account-tab-pane"
+                        role="tabpanel"
+                        aria-labelledby="account-tab"
+                        tabindex="0"
+                      >
+                        <form class="needs-validation" novalidate>
+                          <div class="row">
+                            <div class="col-md-8">
+                              <div class="form-group">
+                                <label for="account-type"
+                                  >Select account type</label
+                                >
+                                <select
+                                  id="account-type"
+                                  class="form-select form-control1"
+                                >
+                                  <option selected disabled value="">
+                                    Select the account type
+                                  </option>
+                                  <option value="local">Local</option>
+                                  <option value="government">Government</option>
+                                  <option value="international">
+                                    International
+                                  </option>
+                                </select>
+                                <div class="invalid-feedback">
+                                  Please select a valid state.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-md-8">
+                              <label for="cr-no">CR Number</label>
+                              <div class="form-group position-relative">
+                                <input
+                                  id="cr-no"
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="CR Number"
+                                  value=""
+                                />
+                                <button
+                                  id="search-btn"
+                                  class="search-btn btn btn-primary my-0"
+                                  type="button"
+                                >
+                                  <img
+                                    src="imgs/search-icon-default.svg"
+                                    style="width: 14px"
+                                  />
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <label for="company-ar" class="fw-bold mb-3"
+                              >Company Name</label
+                            >
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <input
+                                  id="company-ar"
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Company name in Arabic"
+                                  value=""
+                                />
+                                <div class="invalid-feedback">
+                                  Please enter company name in Arabic
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <input
+                                  id="company-en"
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Company name in English"
+                                  value=""
+                                />
+                                <div class="invalid-feedback">
+                                  Please enter company name in English
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="tax-no">Tax Number</label>
+                                <input
+                                  id="tax-no"
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Enter Tax Number"
+                                  value=""
+                                />
+                                <div class="invalid-feedback">
+                                  Please enter Tax Number
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="business-no"
+                                  >Business Phone Number</label
+                                >
+                                <input
+                                  id="business-no"
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Enter Business Phone Number"
+                                  value=""
+                                />
+                                <div class="invalid-feedback">
+                                  Please enter Business Phone Number
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="text-center">
+                            <button
+                              class="btn btn-primary my-3"
+                              onclick= "switchToNextTab()"
+                              type="button"
+                            >
+                              Next
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+
+                      <div
+                        class="tab-pane fade"
+                        id="address-tab-pane"
+                        role="tabpanel"
+                        aria-labelledby="address-tab"
+                        tabindex="0"
+                      >
+                        <form class="needs-validation" novalidate>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="additional-no"
+                                  >Additional Number</label
+                                >
+                                <input
+                                  id="additional-no"
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Enter Additional Number"
+                                  value=""
+                                />
+                                <div class="invalid-feedback">
+                                  Please enter Additional number
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="unit-no">Unit Number</label>
+                                <input
+                                  id="unit-no"
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Enter Unit Number"
+                                  value=""
+                                />
+                                <div class="invalid-feedback">
+                                  Please enter Unit Number
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="building-no">Building Number</label>
+                                <input
+                                  id="building-no"
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Enter Building Number"
+                                  value=""
+                                  required
+                                />
+                                <div class="invalid-feedback">
+                                  Please enter Building number
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="zip">Zip Code</label>
+                                <input
+                                  id="zip"
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Enter Zip Code"
+                                  value=""
+                                />
+                                <div class="invalid-feedback">
+                                  Please enter Zip Code
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="address">Short Address</label>
+                                <input
+                                  id="address"
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Enter Short Address"
+                                  value=""
+                                />
+                                <div class="invalid-feedback">
+                                  Please enter Short Address
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="text-center">
+                            <button
+                              class="btn btn-primary my-3"
+                              onclick="SignUp()"
+                              type="button"
+                            >
+                              Sign Up
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--wrapper-->
+
+    <div id="footer">
+      <div class="container-content footer-container"></div>
+      <!--container content-->
+    </div>
+    <!--footer-->
+
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js?v=1.1"></script>
+    <!-- <script src="js/Soap.js"></script> -->
+    <script>
+      function switchToNextTab() {
+    // Get references to the button and tabs
+    var detailsTab = document.getElementById("details-tab");
+    var accountTab = document.getElementById("account-tab");
+    var addressTab = document.getElementById("address-tab");
+    var detailsTabPane = document.getElementById("details-tab-pane");
+    var accountTabPane = document.getElementById("account-tab-pane");
+    var addressTabPane = document.getElementById("address-tab-pane");
+
+    // Switch to the next tab
+    if (detailsTab.classList.contains("active")) {
+      detailsTab.classList.remove("active");
+      accountTab.classList.add("active");
+      detailsTabPane.classList.remove("show", "active");
+      accountTabPane.classList.add("show", "active");
+    } else if (accountTab.classList.contains("active")) {
+      accountTab.classList.remove("active");
+      addressTab.classList.add("active");
+      accountTabPane.classList.remove("show", "active");
+      addressTabPane.classList.add("show", "active");
+    }
+  }
+    </script>
+    <script>
+      const overlayMenu = document.querySelector('.overlay-menu');
+      const spinner = document.querySelector('.spinner');
+
+      // Function to show the loading spinner
+      function showLoadingSpinner() {
+        overlayMenu.style.display = 'block';
+        spinner.style.display = 'block';
+        console.log("Show");
+      }
+
+      // Function to hide the loading spinner
+      function hideLoadingSpinner() {
+        overlayMenu.style.display = 'none';
+        spinner.style.display = 'none';
+        console.log("Hide");
+      }
+      // Get references to the input field and search button
+      var nameInput = document.getElementById("fullname");
+      var emailInput = document.getElementById("email");
+      var phoneInput = document.getElementById("phone-number");
+      var accountTypeInput = document.getElementById("account-type");
+      var businessPhoneInput = document.getElementById("business-no");
+      var taxNumberInput = document.getElementById("tax-no");
+      var crNumberInput = document.getElementById("cr-no");
+      var searchButton = document.getElementById("search-btn");
+      var companyEnInput = document.getElementById("company-en");
+      var companyArInput = document.getElementById("company-ar");
+      var additionalNoInput = document.getElementById("additional-no");
+      var unitNoInput = document.getElementById("unit-no");
+      var zipInput = document.getElementById("zip");
+      var buildingNumber = document.getElementById("building-no");
+      var shortAddress = document.getElementById("address");
+      var CustomerNo;
+
+      async function SignUp() {
+        var accountData = {
+          Name: nameInput.value,
+          Email: emailInput.value,
+          PhoneNumber: phoneInput.value,
+          CustomerNo: CustomerNo,
+          AccountType: accountTypeInput.value,
+          CRNumber: crNumberInput.value,
+          CompanyArabicName: companyArInput.value,
+          CompanyEnglishName: companyEnInput.value,
+          TaxNumber: taxNumberInput.value,
+          BuildingNumber: buildingNumber.value,
+          BusinessPhoneNumber: businessPhoneInput.value,
+          AdditionalNumber: additionalNoInput.value,
+          UnitNumber: unitNoInput.value,
+          ZipCode: zipInput.value,
+          ShortAddress: shortAddress.value
+        };
+
+        var url = "https://localhost:44392/api/account"; // Replace with your API endpoint
+
+        try {
+          const response = await fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(accountData)
+          });
+
+          if (response.ok) {
+            // Request succeeded
+            window.location.href = 'success-page.html';
+          } else {
+            // Request failed
+            console.error("Failed to create account. Error:", response.status);
+          }
+        } catch (error) {
+          console.error("Failed to create account. Error:", error);
+        }
+      }
+
+
+      function getNationalAddress() {
+        var postalCode = zipInput.value;
+        var additionalNumber = additionalNoInput.value;
+        var buildingNum = buildingNumber.value;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://localhost:44392/api/GetWasel/GetNationalAddressByXYZ?postalCode=" + postalCode +
+          "&additionalNumber=" + additionalNumber +
+          "&buildingNumber=" + buildingNum);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              var addressResponse = JSON.parse(xhr.responseText);
+              shortAddress.value = addressResponse;
+              // Handle the address response and update the corresponding input fields
+            } else {
+              // Handle the error cases
+              console.error("API request failed with status code " + xhr.status);
+            }
+          }
+        };
+        xhr.send();
+      }
+    
+      // Add click event listener to the search button
+      searchButton.addEventListener("click", function () {
+        // Get the CR number from the input field
+        var crNumber = crNumberInput.value;
+        // Make an AJAX request to the API endpoint
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://localhost:44392/api/GetWasel/GetCustomerDetails?crNumber=" + crNumber);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              var response = JSON.parse(xhr.responseText);
+              companyEnInput.value = response.CustomerNameinEng;
+              companyArInput.value = response.CustomerNameinAR;
+              additionalNoInput.value = response.AdditionalNumber;
+              unitNoInput.value = response.UnitNo;
+              zipInput.value = response.ZipCode;
+              buildingNumber.value=response.BuildingNo;
+              CustomerNo = response.CustomerId;
+              getNationalAddress();
+              // Process the response data
+            } else {
+              // Handle the error case
+              console.error("API request failed with status code " + xhr.status);
+            }
+          }
+        };
+        xhr.send();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Alpha People</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" href="favicon.png"/>
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css"/>
+    <link rel="stylesheet" href="../css/main-rtl.css?v=1.1"/>
+</head>
+<body>
+
+<div class="main-wrapper overflow-hidden">
+    <div class="auth-layout">
+        <header id="header">
+            <div class="container-content">
+                <ul class="main-menu">
+                    <li>
+                        <a href="#" class="active">Track & Receive</a>
+                    </li>
+                    <li>
+                        <a href="#">Send</a>
+                    </li>
+                    <li>
+                        <a href="#">Help</a>
+                    </li>
+                    <li class="menu-item  menu-item-has-children">
+                        <a href="#">More</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <a href="#">National Address</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Services</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="bg-layer"></div>
+                <div class="hamburger hamburger--spin unactive">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+            </div><!--container content-->
+        </header><!--header-->
+        <div class="overlay-menu"></div>
+        <div class="container-fluid">
+            <div class="row align-items-stretch">
+                <div class="col-xl-5">
+                   <div class="handle-position">
+                       <div class="logo-section">
+                           <img src="imgs/logo.png" alt="">
+                       </div>
+                   </div>
+                </div>
+                <div class="col-xl-7 pr-0">
+                    <div class="info-section position-relative">
+                        <div class="auth-form">
+                            <div class="w-100">
+                                <h2>Sign Up for an account</h2>
+                                <p class="text-base">Already have an account? <a href="login.html">Sign In</a></p>
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="details-tab" data-bs-toggle="tab" data-bs-target="#details-tab-pane" type="button" role="tab" aria-controls="details-tab-pane" aria-selected="true">User details </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="account-tab" data-bs-toggle="tab" data-bs-target="#account-tab-pane" type="button" role="tab" aria-controls="account-tab-pane" aria-selected="false">Account Details</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="address-tab" data-bs-toggle="tab" data-bs-target="#address-tab-pane" type="button" role="tab" aria-controls="address-tab-pane" aria-selected="false">Address Details</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="details-tab-pane" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
+                                        <form class="needs-validation" novalidate>
+                                            <div class="form-group">
+                                                <label for="fullname">Full name</label>
+                                                <input id="fullname" type="text" class="form-control"
+                                                       placeholder="Enter your full name" value="" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter your full name
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email"> Email Address</label>
+                                                <input id="email" type="email" class="form-control"
+                                                       placeholder="Enter your email" value="" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter your email
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="phone-number">Phone Number </label>
+                                                <input id="phone-number" type="text" class="form-control"
+                                                       placeholder="Enter your Phone Number" value="" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter your Phone Number
+                                                </div>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button class="btn btn-primary my-3" type="submit">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="account-tab-pane" role="tabpanel" aria-labelledby="account-tab" tabindex="0">
+                                        <form class="needs-validation" novalidate>
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label for="account-type">Select account type</label>
+                                                        <select id="account-type" class="form-select form-control1" required>
+                                                            <option selected disabled value="">Select the account type</option>
+                                                            <option value="local">Local</option>
+                                                            <option value="government">Government</option>
+                                                            <option value="international">International</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Please select a valid state.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <label for="cr-no">CR Number</label>
+                                                    <div class="form-group position-relative">
+
+                                                        <input id="cr-no" type="text" class="form-control" placeholder="CR Number" value="" required>
+                                                        <button class="search-btn btn btn-primary my-0" type="button">
+                                                            <img src="imgs/search-icon-default.svg" style="width: 14px;">
+                                                        </button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="row">
+                                                <label for="company-ar" class="fw-bold mb-3">Company Name</label>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input id="company-ar" type="text" class="form-control"
+                                                               placeholder="Company name in Arabic" value="" required>
+                                                        <div class="invalid-feedback">
+                                                            Please enter company name in Arabic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input id="company-en" type="text" class="form-control"
+                                                               placeholder="Company name in English" value="" required>
+                                                        <div class="invalid-feedback">
+                                                            Please enter company name in English
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="tax-no">Tax Number</label>
+                                                        <input id="tax-no" type="text" class="form-control"
+                                                               placeholder="Enter Tax Number" value="" required>
+                                                        <div class="invalid-feedback">
+                                                            Please enter Tax Number
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="building-no">Building Number</label>
+                                                        <input id="building-no" type="text" class="form-control"
+                                                               placeholder="Enter Building Number" value="" required>
+                                                        <div class="invalid-feedback">
+                                                            Please enter Building number
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="business-no">Business Phone Number</label>
+                                                        <input id="business-no" type="text" class="form-control"
+                                                               placeholder="Enter Business Phone Number" value="" required>
+                                                        <div class="invalid-feedback">
+                                                            Please enter Business Phone Number
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-center">
+                                                <button class="btn btn-primary my-3" type="submit">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="address-tab-pane" role="tabpanel" aria-labelledby="address-tab" tabindex="0">
+                                        <form class="needs-validation" novalidate>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="additional-no">Additional Number</label>
+                                                        <input id="additional-no" type="text" class="form-control"
+                                                               placeholder="Enter Additional Number" value="" required>
+                                                        <div class="invalid-feedback">
+                                                            Please enter Additional number
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="unit-no">Unit Number</label>
+                                                        <input id="unit-no" type="text" class="form-control"
+                                                               placeholder="Enter Unit Number" value="" required>
+                                                        <div class="invalid-feedback">
+                                                            Please enter Unit Number
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="zip">Zip Code</label>
+                                                        <input id="zip" type="text" class="form-control"
+                                                               placeholder="Enter Zip Code" value="" required>
+                                                        <div class="invalid-feedback">
+                                                            Please enter Zip Code
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="address">Short Address</label>
+                                                        <input id="address" type="text" class="form-control"
+                                                               placeholder="Enter Short Address" value="" required>
+                                                        <div class="invalid-feedback">
+                                                            Please enter Short Address
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-center">
+                                                <button class="btn btn-primary my-3" type="submit">Next</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--wrapper-->
+
+<div id="footer">
+    <div class="container-content footer-container">
+    </div><!--container content-->
+</div><!--footer-->
+
+
+<script src="../js/jquery-3.6.4.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/main.js?v=1.1"></script>
+<script>
+    /* global jQuery $*/
+    $(document).ready(function () {
+        'use strict';
+        $('#account-type').on('change', function () {
+            var accountType = $(this).val();
+            if (accountType === 'local' || accountType === 'government') {
+                $('#account-tab-pane, #address-tab-pane').find('input').prop('disabled', true);
+                $('#account-tab-pane, #address-tab-pane').find('input').prop('required', false);
+                $('#cr-no').prop('disabled', false);
+                $('#cr-no').prop('required', true);
+            } else if (accountType === 'international') {
+                $('#account-tab-pane, #address-tab-pane').find('input').prop('disabled', false);
+                $('#account-tab-pane, #address-tab-pane').find('input').prop('required', true);
+                $('#cr-no').prop('required', false);
+            }
+        });
+    });
+</script>
+</body>
+</html>
